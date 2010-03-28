@@ -2,7 +2,7 @@
 
 = Introduction =
 
-Upload data to pywws.
+Upload weather data to pywws.
 
 
 = Details =
