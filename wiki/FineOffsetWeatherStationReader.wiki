@@ -1,0 +1,10 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Connect your weather station to your Linux box, and upload its contents to the internet.
+
+
+= Details =
+
+The application uses the libusb library to read information from the Fine Offset weather stations. The file "/var/weather.dat" stores the weather station buffer between the reads. 
