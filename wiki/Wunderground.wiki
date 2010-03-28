@@ -2,7 +2,7 @@
 
 = Introduction =
 
-Uploads to wunderground.com requires a wunderground account.
+Upload weather data to wunderground.com.
 
 
 = Details =
