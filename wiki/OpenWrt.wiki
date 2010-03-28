@@ -1,0 +1,12 @@
+#summary OpenWrt build instructions.
+
+= Introduction =
+
+The fowsr application can be built using the OpenWrt build system.
+
+
+= Details =
+
+The fowsr application is included as a package in OpenWrt. The easiest way to get a binary for a particular architecture may be to download the OpenWrt build system and to generate the binaries as described in this documentation:
+
+http://kamikaze.openwrt.org/docs/openwrt.html
