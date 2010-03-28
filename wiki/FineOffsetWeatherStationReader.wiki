@@ -13,6 +13,6 @@ Connect your weather station to your Linux box, and upload its contents to the i
 
  * The log files `/var/*.log` contains the weather station output in the requested format.
 
- * The script files `/usr/bin/*.sh` contains the weather station upload configuration details.
+ * The script files `/usr/bin/*.sh` contains the weather station upload details.
 
  * Cron is then used to call the requested script files at regular intervals.
