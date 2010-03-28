@@ -1,0 +1,14 @@
+#summary Compatible weather stations.
+
+= Introduction =
+
+The EasyWeather PC-application is used to check compatibility.
+
+
+= Details =
+
+The EasyWeather application available from the Fine Offset Electronic's web site is able to read weather data from all weather stations compatible with fowsr:
+
+http://www.foshk.com/en/products/show.asp?id=42
+
+If the EasyWeather application can read your weather station, then the foswr application will work. The EasyWeather software is also needed to configure the weather station's read interval and time zone.
