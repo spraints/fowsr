@@ -7,7 +7,9 @@ Uploads to wunderground.com requires a wunderground account.
 
 = Details =
 
-wunderground.com, or Weather Underground, is an internet based weather service. The input for wunderground.com is an URL submitted to the following URL: 
+wunderground.com, or Weather Underground, is an internet based weather service. Visit wunderground.com and create an account before proceeding with the configuration.
+
+The input for wunderground.com is an URL submitted to the following URL: 
 
 http://weatherstation.wunderground.com/weatherstation/updateweatherstation.php
 
@@ -24,4 +26,4 @@ dateutc=2010-03-14%2005:00:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&hum
 dateutc=2010-03-14%2004:55:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=32.0&tempf=65.7&rainin=0.4&baromin=292.8<br>
 dateutc=2010-03-14%2004:50:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=33.0&tempf=65.7&rainin=0.4&baromin=292.8<br>
 
-The rest of the variables, including user id and password is stored in the script /usr/bin/wunderground.sh, so the upload script must be updated with the username and password to be used before it is called.
+The rest of the variables, including user id and password is stored in the script /usr/bin/wunderground.sh, so the upload script must be updated with the username and password to be used for wunderground account before it is called.
