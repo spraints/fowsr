@@ -7,7 +7,7 @@ The EasyWeather PC-application is used to check compatibility.
 
 = Details =
 
-The EasyWeather application available from the Fine Offset Electronic's web site is able to read weather data from all weather stations compatible with *fowsr*:
+The EasyWeather application available from the Fine Offset Electronic's web site can read weather data from all weather stations compatible with *fowsr*:
 
 http://www.foshk.com/en/products/show.asp?id=42
 
