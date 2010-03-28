@@ -17,7 +17,7 @@ The input for wunderground.com is an URL submitted to the following URL:
 
 http://weatherstation.wunderground.com/weatherstation/updateweatherstation.php
 
-fowsr supports the following variables that is read from the weather station:
+*fowsr* supports the following variables that is read from the weather station:
 
 dateutc=2010-03-14%2005:35:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=32.0&tempf=65.5&rainin=0.4&baromin=292.8<br>
 dateutc=2010-03-14%2005:30:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=32.0&tempf=65.5&rainin=0.4&baromin=292.8<br>
