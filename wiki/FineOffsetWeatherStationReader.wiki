@@ -7,12 +7,12 @@ Connect your weather station to your Linux box, and upload its contents to the i
 
 = Details =
 
-The application uses the libusb library to read information from the Fine Offset weather stations.
+ * The application uses the libusb library to read information from the Fine Offset weather stations.
 
- * The cache file "/var/weather.dat" stores the weather station buffer between the reads. Deleting this file causes the application to re-read all weather station data.
+ * The cache file `/var/weather.dat` stores the weather station buffer between the reads. Deleting this file causes the application to re-read all weather station data.
 
- * The log files "/var/*.log" contains the weather station output in the requested format.
+ * The log files `/var/*.log` contains the weather station output in the requested format.
 
- * The script files "/usr/bin/*.sh" contains the weather station upload comfiguration details.
+ * The script files `/usr/bin/*.sh` contains the weather station upload comfiguration details.
 
  * Cron is then used to call the requested script files at regular intervals.
