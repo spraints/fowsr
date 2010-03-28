@@ -32,4 +32,4 @@ dateutc=2010-03-14%2004:50:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&hum
 
 The rest of the variables, including user id and password, is stored in the script /usr/bin/wunderground.sh.
 
-You can then call the script at regular intervals using cron .
+You can then call the script at regular intervals using cron.
