@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Lightweight USB Wireless Weather Station Reader.
 
 = Introduction =
 
