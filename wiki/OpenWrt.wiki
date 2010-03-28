@@ -24,7 +24,7 @@ $ svn checkout svn://svn.openwrt.org/openwrt/trunk kamikaze
 
 $ ./scripts/feeds update 
 
- * Add the *fowsr* package as a part of the build
+ * Add the *fowsr* package to the build
 
 $ ./scripts/feeds install fowsr
 
