@@ -16,21 +16,5 @@ pywws is a stand alone weather station collection and data presenting software. 
 2010-03-14 04:35,24.0,23.5,33.0,18.8,991.6,0.0,0.0,270.0,0.3,00<br>
 2010-03-14 04:30,24.0,23.5,33.0,18.8,991.6,0.0,0.0,270.0,0.3,00<br>
 
-The file is stored in /var/pywws.log, and can be uploaded by configuring the script pywws.sh:
 
-#!/bin/sh<br>
-<br>
-# Call fowsr and upload data to pywws<br>
-<br>
-wsr=/usr/bin/uwws -p<br>
-LOG=/var/pywws.log<br> 
-UID=<uid> 
-PWD=<pwd> 
-<br>
-WPUT="$LOG ftp://$UID:$PWD@<www.myser.com>/<mypath>" <br>
-<br>
-rm -f $LOG <br>
-$wsr <br>
-<br>
-$WPUT <br>
- 
+The file is stored in /var/pywws.log, and can be uploaded by calling the script /usr/bin/pywws.sh. The script uses FTP for uploading the log file, so the upload script must be updated with the username and password to be used before it is called.
