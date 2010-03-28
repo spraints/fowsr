@@ -15,7 +15,7 @@ http://weatherstation.wunderground.com/weatherstation/updateweatherstation.php
 
 fowsr supports the following variables that is read from the weather station:
 
-dateutc=2010-03-14%2005:35:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=32.0&tempf=65.5&rainin=0.4&baromin=292.8<br>
+`dateutc=2010-03-14%2005:35:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=32.0&tempf=65.5&rainin=0.4&baromin=292.8<br>
 dateutc=2010-03-14%2005:30:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=32.0&tempf=65.5&rainin=0.4&baromin=292.8<br>
 dateutc=2010-03-14%2005:25:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=32.0&tempf=65.5&rainin=0.4&baromin=292.8<br>
 dateutc=2010-03-14%2005:20:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=32.0&tempf=65.5&rainin=0.4&baromin=292.8<br>
@@ -24,6 +24,6 @@ dateutc=2010-03-14%2005:10:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&hum
 dateutc=2010-03-14%2005:05:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=33.0&tempf=65.5&rainin=0.4&baromin=292.8<br>
 dateutc=2010-03-14%2005:00:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=33.0&tempf=65.7&rainin=0.4&baromin=292.8<br>
 dateutc=2010-03-14%2004:55:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=32.0&tempf=65.7&rainin=0.4&baromin=292.8<br>
-dateutc=2010-03-14%2004:50:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=33.0&tempf=65.7&rainin=0.4&baromin=292.8<br>
+dateutc=2010-03-14%2004:50:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=33.0&tempf=65.7&rainin=0.4&baromin=292.8<br>`
 
 The rest of the variables, including user id and password, is stored in the script /usr/bin/wunderground.sh.
