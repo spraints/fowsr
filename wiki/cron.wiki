@@ -9,7 +9,7 @@ Call your scripts at regular intervals to upload data.
 
 cron is a Linux process that is used to perform tasks at regular intervals. The following statement will cause the script /usr/bin/wunderground.sh to be called every 15 minutes: 
 
-`*/15 * * * * /usr/bin/wunderground.sh`
+`*/15 * * * * /usr/bin/wunderground.sh <user id> <password>`
 
 Enter the following command to add the line above to cron on your Linux system:
 
