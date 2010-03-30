@@ -7,7 +7,7 @@ Call your scripts at regular intervals to upload data.
 
 = Details =
 
-cron is a Linux process that is used to perform tasks at regular intervals. The following statement will cause the script /usr/bin/wunderground.sh to be called every 15 minutes: 
+cron is a Linux process that is used to perform tasks at regular intervals. The following statement will cause the script /usr/bin/wunderground.sh to be called every 15 minutes, passing the parameters <username> and <password>: 
 
 `*/15 * * * * /usr/bin/wunderground.sh <username> <password>`
 
