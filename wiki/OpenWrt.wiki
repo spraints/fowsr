@@ -18,20 +18,20 @@ A quick guide for generating a build system for *fowsr* includes the following s
 
  * Download the latest OpenWrt trunk:
 
-      $ svn checkout svn://svn.openwrt.org/openwrt/trunk kamikaze
+      `$ svn checkout svn://svn.openwrt.org/openwrt/trunk kamikaze`
 
  * Include packages in the build: 
 
-      $ ./scripts/feeds update 
+      $ `./scripts/feeds update`
 
  * Add the *fowsr* package to the build
 
-      $ ./scripts/feeds install fowsr
+      $ `./scripts/feeds install fowsr`
 
  * Start the build system and select your architecture:
 
-      $ make menuconfig
+      $ `make menuconfig`
 
  * Build the code:
 
-      $ make
+      $ `make`
