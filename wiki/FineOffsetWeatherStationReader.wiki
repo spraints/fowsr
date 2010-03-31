@@ -2,7 +2,7 @@
 
 = Introduction =
 
-Connect your weather station to your Linux box, and upload its contents to the internet.
+Connect your weather station to the USB port of your Linux box, and upload its contents to the internet.
 
 
 = Details =
