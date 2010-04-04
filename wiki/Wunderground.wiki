@@ -4,7 +4,7 @@
 
 Upload weather data to wunderground.com.
 
-<a href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=IOSLOOSL14"><img border="0" src="http://banners.wunderground.com/cgi-bin/banner/ban/wxBanner?bannertype=wxstnsticker_both&weatherstationcount=IOSLOOSL14" width="160" height="160"></a>
+http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=IOSLOOSL14 http://banners.wunderground.com/cgi-bin/banner/ban/wxBannerbannertype=wxstnsticker_both&weatherstationcount=IOSLOOSL14 width="160" height="160"
 
 = Details =
 
