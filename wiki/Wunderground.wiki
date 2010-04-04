@@ -1,22 +1,22 @@
-#summary Wunderground uploads.
+#summary Weather Underground uploads.
 
 = Introduction =
 
-Upload weather data to wunderground.com.
+Upload weather data to Weather Underground.
 
 = Details =
 
-wunderground.com, or Weather Underground, is an internet based weather service. 
+Weather Underground is an internet based weather service. 
 
-Visit wunderground.com and create an account before proceeding with the configuration:
+Visit Weather Underground and create an account before proceeding with the configuration:
 
 http://www.wunderground.com/members/signup.asp
 
-The input for wunderground.com is an URL submitted to the following URL: 
+The input to Weather Underground is an URL submitted to the following URL: 
 
 http://weatherstation.wunderground.com/weatherstation/updateweatherstation.php
 
-*fowsr* supports the following variables that is read from the weather station:
+*fowsr* supports the following variables that is read from the weather station and stored in `/var/wunderground.sh.log`:
 
 dateutc=2010-03-14%2005:20:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=32.0&tempf=65.5&rainin=0.4&baromin=29.28<br>
 dateutc=2010-03-14%2005:15:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=32.0&tempf=65.5&rainin=0.4&baromin=29.28<br>
@@ -26,7 +26,7 @@ dateutc=2010-03-14%2005:00:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&hum
 dateutc=2010-03-14%2004:55:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=32.0&tempf=65.7&rainin=0.4&baromin=29.28<br>
 dateutc=2010-03-14%2004:50:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&humidity=33.0&tempf=65.7&rainin=0.4&baromin=29.28<br>
 
-The file is stored in `/var/wunderground.sh.log`, and can be uploaded by calling the script `/usr/bin/wunderground.sh`. 
+The file can be uploaded to Weather Underground by calling the script `/usr/bin/wunderground.sh`. 
 
 The script can be called at regular intervals using cron, or called directly from the command line:
 
