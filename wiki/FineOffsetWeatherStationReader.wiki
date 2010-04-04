@@ -4,6 +4,8 @@
 
 Connect your weather station to the USB port of your Linux box, and upload its contents to the internet.
 
+<toc:wiki />
+
 
 = Details =
 
