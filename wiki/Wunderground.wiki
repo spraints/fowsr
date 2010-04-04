@@ -4,7 +4,9 @@
 
 Upload weather data to Weather Underground.
 
-<wiki:gadget url="http://pwsgadgets.googlecode.com/svn/trunk/pws_WundergroundBanner.xml&amp;up_wnd_id=IOSLOOSL14&amp;up_wnd_units=_metric&amp;up_update_timer=300000&amp;synd=open&amp;w=320&amp;h=155&amp;title=Weather+underground+PWS+Banner&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js" height="200" border="0" /> 
+<wiki:gadget 
+url=http://pwsgadgets.googlecode.com/svn/trunk/pws_WundergroundBanner.xml&amp;up_wnd_id=IOSLOOSL14&amp;up_wnd_units=_metric&amp;up_update_timer=300000&amp;synd=open&amp;w=320&amp;h=155&amp;title=Weather+underground+PWS+Banner&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js">
+/> 
 
 = Details =
 
