@@ -4,8 +4,6 @@
 
 Upload weather data to wunderground.com.
 
-http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=IOSLOOSL14 http://banners.wunderground.com/cgi-bin/banner/ban/wxBannerbannertype=wxstnsticker_both&weatherstationcount=IOSLOOSL14 width="160" height="160"
-
 = Details =
 
 wunderground.com, or Weather Underground, is an internet based weather service. 
