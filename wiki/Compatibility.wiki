@@ -2,13 +2,13 @@
 
 = Introduction =
 
-The [http://www.foshk.com/en/products/show.asp?id=42 EasyWeather] PC-application is used to check compatibility.
+The [http://fowsr.googlecode.com/files/2009526181448.zip EasyWeather] PC-application is used to check compatibility.
 
 
 = Details =
 
-The [http://www.foshk.com/en/products/show.asp?id=42 EasyWeather] application available from the Fine Offset Electronic's web site can read weather data from all weather stations compatible with *fowsr*:
+The [http://fowsr.googlecode.com/files/2009526181448.zip EasyWeather] application available from the Fine Offset Electronic's web site can read weather data from all weather stations compatible with *fowsr*:
 
 http://www.foshk.com/en/products/show.asp?id=42
 
-If the [http://www.foshk.com/en/products/show.asp?id=42 EasyWeather] application can read your weather station, then the *fowsr* application will work. The [http://www.foshk.com/en/products/show.asp?id=42 EasyWeather] software is also needed to configure the weather station's read interval, time zone and relative pressure.
+If the [http://fowsr.googlecode.com/files/2009526181448.zip EasyWeather] application can read your weather station, then the *fowsr* application will work. The [http://www.foshk.com/en/products/show.asp?id=42 EasyWeather] software is also needed to configure the weather station's read interval, time zone and relative pressure.
