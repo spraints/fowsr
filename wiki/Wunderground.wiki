@@ -28,7 +28,7 @@ dateutc=2010-03-14%2004:50:38&winddir=270.0&windspeedmph=0.0&windgustmph=0.0&hum
 
 The file can be uploaded to Weather Underground by calling the script `/usr/bin/wunderground.sh`. 
 
-The script can be called at regular intervals using cron, or called directly from the command line:
+The script can be called at regular intervals using [http://code.google.com/p/fowsr/w/edit/cron cron], or called directly from the command line:
 
 `/usr/bin/wunderground.sh <username> <password>`
 
