@@ -10,13 +10,7 @@ pywws is a stand alone weather station collection and data presentation software
 
 The input for pywws is a comma separated file, and is typically sent to pywws over FTP.
 
-
-
-
-
-
-
-*fowsr* supports the following variables that is read from the weather station, stored in a comma separated file of the following format:
+*fowsr* supports the following variables read from the weather station and stored in a comma separated file called `/var/pywws.log`:
 
 2010-03-14 17:50:18,5.0,24.0,24.6,37.0,20.7,992.2,0.0,0.0,12.0,0.3,00<br>
 2010-03-14 17:45:18,5.0,24.0,24.6,37.0,20.8,992.2,0.0,0.0,12.0,0.3,00<br>
@@ -26,9 +20,9 @@ The input for pywws is a comma separated file, and is typically sent to pywws ov
 2010-03-14 17:25:18,5.0,24.0,24.5,38.0,20.9,992.1,0.0,0.0,12.0,0.3,00<br>
 2010-03-14 17:20:18,5.0,24.0,24.5,38.0,20.9,992.1,0.0,0.0,12.0,0.3,00<br>
 
-The file is stored in `/var/pywws.log`, and can be uploaded by calling the script `/usr/bin/pywws.sh`. 
+The log file can be uploaded by calling the script `/usr/bin/pywws.sh`. 
 
-The script can be called at regular intervals using cron, or called directly from the command line:
+The script can be called at regular intervals using [http://code.google.com/p/fowsr/w/edit/cron cron], or called directly from the command line:
 
 `/usr/bin/pywws.sh <username> <password>`
 
