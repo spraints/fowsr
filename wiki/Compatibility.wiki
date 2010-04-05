@@ -11,4 +11,4 @@ The [http://fowsr.googlecode.com/files/2009526181448.zip EasyWeather] applicatio
 
 http://www.foshk.com/en/products/show.asp?id=42
 
-If the [http://fowsr.googlecode.com/files/2009526181448.zip EasyWeather] application can read your weather station, then the *fowsr* application will work. The [http://www.foshk.com/en/products/show.asp?id=42 EasyWeather] software is also needed to configure the weather station's read interval, time zone and relative pressure.
+If the [http://fowsr.googlecode.com/files/2009526181448.zip EasyWeather] application can read your weather station, then the *fowsr* application will work. The [http://fowsr.googlecode.com/files/2009526181448.zip EasyWeather] software is also needed to configure the weather station's read interval, time zone and relative pressure.
