@@ -22,7 +22,7 @@ The input for pywws is a comma separated file, and is typically sent to pywws ov
 
 The log file can be uploaded by calling the script `/usr/bin/pywws.sh`. 
 
-The script can be called at regular intervals using [http://code.google.com/p/fowsr/w/edit/cron cron], or called directly from the command line:
+The script can be called at regular intervals using [http://code.google.com/p/fowsr/wiki/cron cron], or called directly from the command line:
 
 `/usr/bin/pywws.sh <username> <password>`
 
