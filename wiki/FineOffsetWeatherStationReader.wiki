@@ -7,7 +7,9 @@ Connect your weather station to the USB port of your Linux box, and upload its c
 
 = Details =
 
- * The application uses the libusb library to read information from the Fine Offset Weather Stations.
+ * *fowsr* uses the libusb library to read information from the Fine Offset Weather Stations.
+
+ * *fowsr* is installed as `/usr/bin/fowsr`, and may be called directly from this location.
 
  * The cache file `/var/weather.dat` stores the weather station buffer between the reads. Deleting this file causes the application to re-read all weather station data.
 
@@ -15,4 +17,4 @@ Connect your weather station to the USB port of your Linux box, and upload its c
 
  * The script files `/usr/bin/*.sh` contains the weather station upload details.
 
- * cron is then used to call the requested script files at regular intervals.
+ * cron is used to call the requested script files at regular intervals.
