@@ -20,6 +20,10 @@ A quick guide for generating a build system for *fowsr* includes the following s
 
       `$ svn checkout svn://svn.openwrt.org/openwrt/trunk kamikaze`
 
+ * Enter the kamikaze catalog:
+
+      `$ cd kamikaze`
+
  * Include packages in the build: 
 
       $ `./scripts/feeds update`
