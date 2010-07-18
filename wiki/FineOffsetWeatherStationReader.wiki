@@ -8,7 +8,7 @@ Connect your weather station to the USB port of your Linux box, and upload its c
 
  * *fowsr* is installed as `/usr/bin/fowsr`, and may be called directly from this location.
 
- * The cache file `/var/weather.dat` stores the weather station buffer between the reads. Deleting this file causes the application to re-read all weather station data.
+ * The cache file `/var/fowsr.dat` stores the weather station buffer between the reads. Deleting this file causes the application to re-read all weather station data.
 
  * The log files `/var/*.log` contains the weather station output in the requested format.
 
