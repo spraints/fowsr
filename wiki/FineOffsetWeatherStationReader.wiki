@@ -19,7 +19,7 @@ Connect your weather station to the USB port of your Linux box, and upload its c
 
 = Details =
 
-The following listing lists the fixed block contents of the weather station:
+The following listing is an example of the fixed block contents of the weather station:
 
 {{{
 00014BDC | 55 AA AA FF FF FF FF FF 00 00 00 00 49 00 00 00 | Uªª.........I...
