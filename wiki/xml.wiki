@@ -25,7 +25,7 @@ Create a local XML format log file.
 }}}
 
 
-The file can be created by calling the script /usr/bin/xml.sh. 
+The file can be created by calling the script `/usr/bin/xml.sh`.
 
 The script can be called at regular intervals using cron, or called directly from the command line: 
 
