@@ -4,9 +4,6 @@
 
 Connect your weather station to the USB port of your Linux box, and upload its contents to the internet.
 
-
-= Details =
-
  * *fowsr* uses the libusb library to read information from the Fine Offset Weather Stations.
 
  * *fowsr* is installed as `/usr/bin/fowsr`, and may be called directly from this location.
@@ -18,3 +15,117 @@ Connect your weather station to the USB port of your Linux box, and upload its c
  * The script files `/usr/bin/*.sh` contains the weather station upload details.
 
  * cron is used to call the requested script files at regular intervals.
+
+
+= Details =
+
+The following listing lists the fixed block contents of the weather station:
+
+{{{
+00014BDC | 55 AA AA FF FF FF FF FF 00 00 00 00 49 00 00 00 | Uªª.........I...
+00014BEC | 05 20 02 30 09 00 00 00 01 00 00 F0 0F 00 40 9D | ...0.......ð..@
+00014C0C | 41 23 C8 00 00 00 46 2D 2C 01 64 80 C8 00 00 00 | A#È...F-,.dÈ...
+00014C1C | 64 00 64 80 A3 28 80 25 00 00 00 00 00 B4 00 00 | d.d£(%.....´..
+00014C2C | 68 01 00 0A 00 F4 01 12 00 00 00 00 00 00 00 00 | h....ô..........
+00014C3C | 00 00 4A 11 60 0F 1C 01 50 00 2A 01 07 80 2A 01 | ..J.`...P.*..*.
+00014C4C | 41 80 C9 00 03 00 1F 28 0A 26 5F 28 23 26 63 00 | AÉ....(.&_(#&c.
+00014C5C | 85 00 38 01 38 01 55 02 9E 04 B7 06 00 10 07 13 | .8.8.U..·.....
+00014C6C | 13 54 10 02 21 07 30 10 04 07 03 01 10 02 21 07 | .T..!.0.......!.
+00014C7C | 39 10 05 19 17 59 10 04 09 08 18 10 06 26 16 30 | 9....Y.......&.0
+00014C8C | 10 04 20 04 31 10 06 26 16 30 07 01 02 07 09 10 | ....1..&.0......
+00014C9C | 07 11 17 11 10 05 26 19 15 10 04 11 06 34 10 06 | ......&......4..
+00014CAC | 12 07 04 10 04 11 06 34 10 03 01 04 00 07 01 02 | .......4........
+00014CBC | 07 09 10 07 13 00 27 10 07 09 22 13 10 07 09 22 | ......'..."...."
+00014CCC | 13 10 07 15 15 49 10 07 15 15 49 10 07 16 23 38 | .....I....I...#8
+}}}
+
+
+This block can be decoded as:
+
+{{{
+read_period=5.0
+units0=32.0
+units_wind_speed=2.0
+display_format0=48.0
+display_format1=9.0
+alarm_enable0=0.0
+alarm_enable1=0.0
+alarm_enable2=0.0
+timezone=1.0
+data_refreshed=61440.000
+data_count=4080.000
+current_pos=40256.000
+rel_pressure=1012.800
+abs_pressure=1006.400
+date_time=2010-07-18 19:50
+alarm.hum_in.hi=65.0
+alarm.hum_in.lo=35.0
+alarm.temp_in.hi=20.000
+alarm.temp_in.lo=0.000
+alarm.hum_out.hi=70.0
+alarm.hum_out.lo=45.0
+alarm.temp_out.hi=30.000
+alarm.temp_out.lo=-10.000
+alarm.windchill.hi=20.000
+alarm.windchill.lo=0.000
+alarm.dewpoint.hi=10.000
+alarm.dewpoint.lo=-10.000
+alarm.abs_pressure.hi=1040.300
+alarm.abs_pressure.lo=960.000
+alarm.rel_pressure.hi=0.000
+alarm.rel_pressure.lo=0.000
+alarm.wind_ave.bft=0.0
+alarm.wind_ave.ms=18.0
+alarm.wind_gust.bft=0.0
+alarm.wind_gust.ms=10.4
+alarm.wind_dir=0.0
+alarm.rain.hour=3.000
+alarm.rain.day=150.000
+alarm.time=12:00
+max.hum_in.val=74.0
+max.hum_in.date=2010-07-13 13:54
+max.hum_out.val=96.0
+max.hum_out.date=2010-04-07 03:01
+max.temp_in.val=28.400
+max.temp_in.date=2010-05-19 17:59
+max.temp_out.val=29.800
+max.temp_out.date=2010-06-26 16:30
+max.windchill.val=29.800
+max.windchill.date=2010-06-26 16:30
+max.dewpoint.val=20.100
+max.dewpoint.date=2010-07-11 17:11
+max.abs_pressure.val=1027.100
+max.abs_pressure.date=2010-04-11 06:34
+max.rel_pressure.val=1033.500
+max.rel_pressure.date=2010-04-11 06:34
+max.wind_ave.val=9.900
+max.wind_ave.date=2007-01-02 07:09
+max.wind_gust.val=13.300
+max.wind_gust.date=2010-07-13 00:27
+max.rain.hour.val=93.600
+max.rain.hour.date=2010-07-09 22:13
+max.rain.day.val=93.600
+max.rain.day.date=2010-07-09 22:13
+max.rain.week.val=179.100
+max.rain.week.date=2010-07-15 15:49
+max.rain.month.val=354.600
+max.rain.month.date=2010-07-15 15:49
+max.rain.total.val=515.700
+max.rain.total.date=2010-07-16 23:38
+min.hum_in.val=17.0
+min.hum_in.date=2010-02-21 07:30
+min.hum_out.val=15.0
+min.hum_out.date=2010-02-21 07:39
+min.temp_in.val=8.000
+min.temp_in.date=2010-04-09 08:18
+min.temp_out.val=-0.700
+min.temp_out.date=2010-04-20 04:31
+min.windchill.val=-6.500
+min.windchill.date=2007-01-02 07:09
+min.dewpoint.val=0.300
+min.dewpoint.date=2010-05-26 19:15
+min.abs_pressure.val=973.800
+min.abs_pressure.date=2010-06-12 07:04
+min.rel_pressure.val=976.300
+min.rel_pressure.date=2010-03-01 04:00
+}}}
