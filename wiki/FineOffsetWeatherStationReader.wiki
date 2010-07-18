@@ -10,11 +10,11 @@ Connect your weather station to the USB port of your Linux box, and upload its c
 
  * The cache file `/var/fowsr.dat` stores the weather station buffer between the reads. Deleting this file causes the application to re-read all weather station data.
 
- * The log files `/var/*.log` contains the weather station output in the requested format.
+ * The log files `/var/*.log` contain the weather station output in the requested format.
 
- * The script files `/usr/bin/*.sh` contains the weather station upload details.
+ * The script files `/usr/bin/*.sh` contain the weather station upload details.
 
- * cron is used to call the requested script files at regular intervals.
+ * `cron` is used to call the requested script files at regular intervals.
 
 
 = Details =
@@ -40,7 +40,7 @@ The following listing is an example of the fixed block contents of the weather s
 }}}
 
 
-This block can be decoded as:
+The fixed block above can be decoded as:
 
 {{{
 read_period=5.0
