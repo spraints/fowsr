@@ -7,6 +7,6 @@ The [http://fowsr.googlecode.com/files/2009526181448.zip EasyWeather] PC-applica
 
 = Details =
 
-The [http://fowsr.googlecode.com/files/2009526181448.zip EasyWeather] application can read weather data from all weather stations with USB port that are compatible with *fowsr*. The latest version is available from the Fine Offset Electronic's [http://www.foshk.com/en/products/show.asp?id=42 web site]. 
+The [http://fowsr.googlecode.com/files/2009526181448.zip EasyWeather] application can read weather data from all weather stations with USB port that are compatible with *fowsr*. The latest version is always available from the Fine Offset Electronic's [http://www.foshk.com/en/products/show.asp?id=42 web site]. 
 
 If the [http://fowsr.googlecode.com/files/2009526181448.zip EasyWeather] application can read your weather station, then the *fowsr* application will work. The [http://fowsr.googlecode.com/files/2009526181448.zip EasyWeather] software is also needed to configure the weather station's read interval, time zone and relative pressure.
