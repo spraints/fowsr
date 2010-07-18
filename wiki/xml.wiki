@@ -7,6 +7,7 @@ Add your content here.
 
 = Details =
 
+{{{
 <ws>
   <wsd date="2010-07-18 17:09:47" delay="2.0" hum_in="50.0" temp_in="25.200" hum_out="63.0" temp_out="22.400" abs_pressure="1006.400" wind_ave="2.7" wind_gust="4.1" wind_dir="180.0" rain="141.900" status="00">
   <wsd date="2010-07-18 17:04:47" delay="5.0" hum_in="49.0" temp_in="25.300" hum_out="62.0" temp_out="22.500" abs_pressure="1006.300" wind_ave="2.7" wind_gust="3.4" wind_dir="180.0" rain="141.900" status="00">
@@ -20,3 +21,4 @@ Add your content here.
   <wsd date="2010-07-18 16:24:47" delay="5.0" hum_in="48.0" temp_in="25.200" hum_out="54.0" temp_out="22.100" abs_pressure="1006.400" wind_ave="4.1" wind_gust="5.8" wind_dir="180.0" rain="141.900" status="00">
   <wsd date="2010-07-18 16:19:47" delay="5.0" hum_in="48.0" temp_in="25.200" hum_out="55.0" temp_out="21.900" abs_pressure="1006.400" wind_ave="3.7" wind_gust="6.1" wind_dir="180.0" rain="141.900" status="00">
 </ws>
+}}}
