@@ -2,10 +2,12 @@
 
 = Introduction =
 
-Add your content here.
+Create a local XML format log file.
 
 
 = Details =
+
+*fowsr* supports the following variables read from the weather station and stored in `/var/fowsr.xml`:
 
 {{{
 <ws>
