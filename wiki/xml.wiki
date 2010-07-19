@@ -2,7 +2,7 @@
 
 = Introduction =
 
-Create a local XML format log file.
+Create a local XML-format log file.
 
 
 = Details =
