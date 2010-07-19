@@ -130,7 +130,24 @@ min.rel_pressure.val=976.300
 min.rel_pressure.date=2010-03-01 04:00
 }}}
 
-The following listing is an example of the weather station records:
+The following listing is an example of the weather station records. Each line represents a measurement that can be decoded as follows:
+
+ * Minutes since last stored reading (1:240) 
+ * Indoor relative humidity %        (1:99)    , 0xFF means invalid 
+ * Indoor temperature °C            (-40:+60) , 0xFFFF means invalid 
+ * Outdoor relative humidity %       (1:99)    , 0xFF means invalid 
+ * Outdoor temperature °C         (-40:+60) , 0xFFFF means invalid 
+ * Absolute pressure hPa        (920:1080), 0xFFFF means invalid 
+ * Wind average m/s        (0:50)    , 0xFF means invalid 
+ * Wind gust m/s        (0:50)    , 0xFF means invalid 
+ * Wind speed
+   - Lower 4 bits are the average wind speed high bits
+   - Upper 4 bits are the gust wind speed high bits 
+ * Wind direction Multiply by 22.5 to get ° from north (0-15), 7th bit indicates invalid data 
+ * Total rainfall mm 
+ * Status
+   - 6th bit indicates loss of contact with sensors
+   - 7th bit indicates rainfall overflow 
 
 {{{
 00014CDC | 05 3F D0 00 4F A9 00 42 27 11 1B 00 08 7E 01 00 | .?Ð.O©.B'....~..
