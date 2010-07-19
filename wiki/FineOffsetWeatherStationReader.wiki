@@ -141,13 +141,15 @@ The following listing is an example of the weather station records. Each line re
  * Wind average m/s        (0:50)    , 0xFF means invalid 
  * Wind gust m/s        (0:50)    , 0xFF means invalid 
  * Wind speed
-   - Lower 4 bits are the average wind speed high bits
-   - Upper 4 bits are the gust wind speed high bits 
- * Wind direction Multiply by 22.5 to get ° from north (0-15), 7th bit indicates invalid data 
- * Total rainfall mm 
+   ** Lower 4 bits are the average wind speed high bits
+   ** Upper 4 bits are the gust wind speed high bits 
+ * Wind direction
+   ** Multiply by 22.5 to get ° from north (0-15)
+   ** 7th bit indicates invalid data 
+ * Total rainfall mm
  * Status
-   - 6th bit indicates loss of contact with sensors
-   - 7th bit indicates rainfall overflow 
+   ** 6th bit indicates loss of contact with sensors
+   ** 7th bit indicates rainfall overflow 
 
 {{{
 00014CDC | 05 3F D0 00 4F A9 00 42 27 11 1B 00 08 7E 01 00 | .?Ð.O©.B'....~..
