@@ -1,4 +1,4 @@
-#summary XML format log file
+#summary XML-format log file
 
 = Introduction =
 
