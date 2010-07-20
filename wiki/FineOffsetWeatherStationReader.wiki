@@ -6,24 +6,7 @@ Connect your weather station to the USB port of your Linux box, and upload its c
 
  * *fowsr* uses the libusb library to read information from the Fine Offset Weather Stations.
 
- * *fowsr* is installed as `/usr/bin/fowsr`, and may be called directly from this location:
-
-{{{
-Fine Offset Weather Station Reader v1.0
-
-(C) 2010 Arne-Jørgen Auberg (arne.jorgen.auberg@gmail.com)
-Credits to Michael Pendec, Jim Easterbrook, Timo Juhani Lindfors
-
-See http://fowsr.googlecode.com for more information
-
-options
- -p     Logfile in pywws format
- -w     Logfile in Wunderground format
- -x     Logfile in XML format
- -b     Display fixed block
- -d     Display decoded fixed block data
- -r     Dump all weather station records
-}}}
+ * *fowsr* is installed as `/usr/bin/fowsr`, and may be called directly from this location.
 
  * The cache file `/var/fowsr.dat` stores the weather station buffer between the reads. Deleting this file causes the application to re-read all weather station data.
 
