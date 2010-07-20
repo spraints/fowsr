@@ -8,6 +8,7 @@ Connect your weather station to the USB port of your Linux box, and upload its c
 
  * *fowsr* is installed as `/usr/bin/fowsr`, and may be called directly from this location:
 
+{{{
 Fine Offset Weather Station Reader v1.0
 
 (C) 2010 Arne-Jørgen Auberg (arne.jorgen.auberg@gmail.com)
@@ -22,6 +23,7 @@ options
  -b     Display fixed block
  -d     Display decoded fixed block data
  -r     Dump all weather station records
+}}}
 
  * The cache file `/var/fowsr.dat` stores the weather station buffer between the reads. Deleting this file causes the application to re-read all weather station data.
 
