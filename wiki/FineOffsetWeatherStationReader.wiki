@@ -14,7 +14,7 @@ Connect your weather station to the USB port of your Linux box, and upload its c
 
  * The script files `/usr/bin/*.sh` contain the weather station upload details.
 
- * `[http://code.google.com/p/fowsr/wiki/cron] cron` is used to call the requested script files at regular intervals.
+ * [http://code.google.com/p/fowsr/wiki/cron cron] is used to call the requested script files at regular intervals.
 
 
 = Details =
