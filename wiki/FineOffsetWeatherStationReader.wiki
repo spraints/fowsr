@@ -222,6 +222,4 @@ Each line represents a record that can be decoded as follows:
    ** 7th bit indicates rainfall overflow 
 
 
-For full details, see the source code:
-
-[http://code.google.com/p/fowsr/source/browse/trunk/fowsr-1.0/fowsr.h fowsr.h]
+For full details, see the source code: [http://code.google.com/p/fowsr/source/browse/trunk/fowsr-1.0/fowsr.h fowsr.h]
