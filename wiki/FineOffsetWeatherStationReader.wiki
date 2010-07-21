@@ -200,7 +200,7 @@ The following listing is an example of the weather station records:
 000150DC | 05 41 D2 00 4D B8 00 36 27 0E 14 00 07 7E 01 00 | .AÒ.M¸.6'....~..
 }}}
 
-Each line represents a measurement that can be decoded as follows:
+Each line represents a record that can be decoded as follows:
 
  * Minutes since last stored reading (1:240) 
  * Indoor relative humidity %        (1:99)    , 0xFF means invalid 
