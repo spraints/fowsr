@@ -41,7 +41,7 @@ A quick guide for generating a build system for *fowsr* includes the following s
       $ `make`
 
 
-The latest *fowsr* Makefile is always available from this location:
+The latest OpenWrt Makefile is always available from this location:
 
 http://fowsr.googlecode.com/svn/trunk/openwrt/Makefile
 
