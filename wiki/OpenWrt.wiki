@@ -48,7 +48,6 @@ Perform the following steps if the Makefile in the OpenWrt trunk is out of date:
 `<build directory>/feeds/packages/utils/fowsr/Makefile`
 
  * Alternatively, update at least the following fields to match the latest Makefile:
-
    ** `PKG_RELEASE`
    ** `PKG_MD5SUM`
 
