@@ -39,3 +39,16 @@ A quick guide for generating a build system for *fowsr* includes the following s
  * Build the code:
 
       $ `make`
+
+
+The latest *fowsr* Makefile is always available from this location:
+
+http://fowsr.googlecode.com/svn/trunk/openwrt/Makefile
+
+If the OpenWRT Makefile is out of date, copy the Makefile above to the following location in your make system:
+
+<build directory>/feeds/packages/utils/fowsr/Makefile
+
+ * Build the updated package:
+
+      $ `make`
