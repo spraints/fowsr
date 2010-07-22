@@ -7,7 +7,9 @@ The *fowsr* application can be built using the OpenWrt build system.
 
 = Details =
 
-The *fowsr* application is included as a [https://dev.openwrt.org/browser/packages/utils/fowsr package] in OpenWrt. A convenient way to get a binary for a particular architecture is to download the OpenWrt build system and generate the binaries as described in this documentation:
+== Initial build ==
+
+The *fowsr* application is included as a  [https://dev.openwrt.org/browser/packages/utils/fowsr package] in OpenWrt. A convenient way to get a binary for a particular architecture is to download the OpenWrt build system and generate the binaries as described in this documentation:
 
 http://kamikaze.openwrt.org/docs/openwrt.html#x1-390002
 
@@ -40,6 +42,8 @@ A quick guide for generating a build system for *fowsr* includes the following s
 
       $ `make`
 
+
+== Updating the Makefile ==
 
 Perform the following steps if the Makefile in the OpenWrt trunk is out of date:
 
