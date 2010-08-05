@@ -8,9 +8,7 @@ The *fowsr* application is included as a [https://dev.openwrt.org/browser/packag
 
 == Prebuilt snapshots ==
 
-Prebuilt snapshots for different architectures can be found here:
-
-[http://downloads.openwrt.org/snapshots/trunk/ snapshots]
+Prebuilt snapshots for different architectures can be found [http://downloads.openwrt.org/snapshots/trunk/ here].
 
 The *fowsr* application is found in the packages directory:
 
