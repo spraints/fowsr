@@ -12,6 +12,10 @@ Prebuilt snapshots for different architectures can be found here:
 
 [http://downloads.openwrt.org/snapshots/trunk/ snapshots]
 
+The *fowsr* application is found in the packages directory:
+
+`http://downloads.openwrt.org/snapshots/trunk/<architecture>/packages/fowsr-<version>`
+
 == Custom build ==
 
 A convenient way to make a custom build for a particular architecture is to download the OpenWrt build system and generate the binaries as described in this documentation:
@@ -50,13 +54,9 @@ A quick guide for generating a build system for *fowsr* includes the following s
 
 == Updating the Makefile ==
 
-The latest OpenWrt Makefile is always available from this location:
-
-`http://fowsr.googlecode.com/svn/trunk/openwrt/Makefile`
-
 Perform the following steps if the Makefile in the OpenWrt trunk is out of date:
 
- * Copy the Makefile above to the following location in your make system:
+ * Copy this [http://fowsr.googlecode.com/svn/trunk/openwrt/Makefile Makefile] to the following location in your OpenWrt build system:
 
 `<build directory>/feeds/packages/utils/fowsr/Makefile`
 
