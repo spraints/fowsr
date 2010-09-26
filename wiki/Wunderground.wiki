@@ -12,7 +12,7 @@ Visit Weather Underground and create an account before proceeding with the confi
 
 http://www.wunderground.com/members/signup.asp
 
-The input to Weather Underground is an URL submitted to the following URL: 
+The input to Weather Underground is a HTTP GET submitted to the following URL: 
 
 http://weatherstation.wunderground.com/weatherstation/updateweatherstation.php
 
