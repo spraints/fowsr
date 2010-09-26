@@ -12,7 +12,7 @@ Visit PWS Weather and create an account before proceeding with the configuration
 
 http://www.pwsweather.com/register.php
 
-The input to PWS Weather is an URL submitted to the following URL: 
+The input to PWS Weather is a HTTP GET submitted to the following URL: 
 
 http://www.pwsweather.com/pwsupdate/pwsupdate.php
 
