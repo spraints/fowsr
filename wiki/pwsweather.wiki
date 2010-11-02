@@ -26,6 +26,6 @@ The script can be called at regular intervals using [http://code.google.com/p/fo
 
 `/usr/bin/pwsweather.sh <username> <password>`
 
-For furher details, please see:
+For further details, please see:
 
 http://www.pwsweather.com/faqs.php
