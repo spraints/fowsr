@@ -236,7 +236,7 @@ Each line represents a record that can be decoded as follows:
  * Wind direction
    ** Multiply by 22.5 to get ° from north (0-15)
    ** 7th bit indicates invalid data 
- * Total rainfall mm
+ * Total rainfall mm (0:9999)
  * Status
    ** 6th bit indicates loss of contact with sensors
    ** 7th bit indicates rainfall overflow 
