@@ -40,7 +40,7 @@ Type 'opkg update' from the command line, or click the 'Update package list' lin
 Type 'opkg install fowsr' from the command line, or click the 'Install' link in the web interface
 
 
-==Configure the package==
+==Configuration==
 
 - Choose the correct upload string, and fill in the username and password for registering the station:
 
@@ -51,3 +51,8 @@ Type 'opkg install fowsr' from the command line, or click the 'Install' link in 
 - Add the selected upload string to cron
 
   * Type 'crontab -e', and add the string using the editor
+
+
+==Testing==
+
+- Check the weather service, and verify that weather data is showing up.
