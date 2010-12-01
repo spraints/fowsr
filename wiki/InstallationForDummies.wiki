@@ -1,0 +1,52 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Follow the steps below for installing fowsr from a prebuilt OpenWrt package.
+
+
+= Details =
+
+==Preparation steps==
+
+- Decide which service to use for displaying the weather data, and create an account for the weather station:
+
+  - www.wunderground.com
+  - www.pwsweather.com
+
+- Install the EasyWeather application, and connect the weather station to your PC:
+
+  - Configure the time zone
+  - Configure the sampling interval to a 5 minutes
+
+- Connect the Weather Station to the OpenWrt device
+
+- Log in to the OpenWrt device, either using the web interface or the command line interface
+
+- Verify that the OpenWrt package feed is available in the opkg configuration
+
+  - Type 'cat /etc/opkg.conf', and verify that the domain 'downloads.openwrt.org' is included in one of the feeds
+
+
+==Installing the package from the OpenWrt repository==
+
+- Update the package lists
+
+Type 'opkg update' from the command line, or click on the 'Update package list' link in the web interface
+
+- Install fowsr
+
+Type 'opkg install fowsr' from the command line, or click on the 'Install' link in the web interface
+
+
+==Configure the package==
+
+- Choose the correct upload string, and fill in the username and password for registering the station:
+
+  - Use '*/5 * * * * /usr/bin/wunderground.sh <username> <password>' for uploading weather data to Weather Underground every 5 minutes
+  - Use '*/5 * * * * /usr/bin/pwsweather.sh <username> <password>' for uploading weather data to PWS Weather every 5 minutes
+  - Use '*/5 * * * * /usr/bin/fowsr.sh <username> <password>' for uploading weather data to both services every 5 minutes
+
+- Add the selected upload string to cron
+
+  - Type 'crontab -e', and add the string using the editor
