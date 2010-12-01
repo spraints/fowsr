@@ -11,8 +11,8 @@ Follow the steps below for installing fowsr from a prebuilt OpenWrt package.
 
 - Decide which service to use for displaying the weather data, and create an account for the weather station:
 
-  * www.wunderground.com
-  * www.pwsweather.com
+  * [http://www.wunderground.com/members/signup.asp www.wunderground.com]
+  * [http://www.pwsweather.com/register.php www.pwsweather.com]
 
 - Install the EasyWeather application, and connect the weather station to your PC:
 
@@ -25,7 +25,8 @@ Follow the steps below for installing fowsr from a prebuilt OpenWrt package.
 
 - Verify that the OpenWrt package feed is available in the opkg configuration
 
-  * Type 'cat /etc/opkg.conf', and verify that the domain 'downloads.openwrt.org' is included in one of the feeds
+  * Type 'cat /etc/opkg.conf', and verify that the domain 'downloads.openwrt.org' is included in one of the feeds if using the command line interface
+  * Verify that the domain 'downloads.openwrt.org' is included in one of the feeds if using the web interface
 
 
 ==Installing the package from the OpenWrt repository==
