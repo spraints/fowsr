@@ -28,6 +28,8 @@ Follow the steps below for installing fowsr from a prebuilt OpenWrt package.
   * Type 'cat /etc/opkg.conf', and verify that the domain 'downloads.openwrt.org' is included in one of the feeds if using the command line interface
   * Verify that the domain 'downloads.openwrt.org' is included in one of the feeds if using the web interface
 
+- Verify that cron is started on your OpenWrt device
+
 
 ==Installation==
 
