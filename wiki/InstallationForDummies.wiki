@@ -1,4 +1,4 @@
-#summary Install fowsr from a prebuilt OpenWrt package.
+#summary Quick install from a prebuilt OpenWrt package.
 
 = Introduction =
 
