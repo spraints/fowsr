@@ -50,7 +50,7 @@ Type 'opkg install fowsr' from the command line, or click the 'Install' link in 
 
 - Add the selected upload string to cron
 
-  * Type 'crontab -e', and add the string using the editor
+  * Type 'crontab -e' from the command line and add the string using the editor, or add the string by clicking the 'cron' link in the WEB page
 
 
 ==Testing==
