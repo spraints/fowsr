@@ -7,7 +7,7 @@ Follow the steps below for installing fowsr from a prebuilt OpenWrt package.
 
 = Details =
 
-==Preparation steps==
+==Preparation==
 
 - Decide which service to use for displaying the weather data, and create an account for the weather station:
 
@@ -29,7 +29,7 @@ Follow the steps below for installing fowsr from a prebuilt OpenWrt package.
   * Verify that the domain 'downloads.openwrt.org' is included in one of the feeds if using the web interface
 
 
-==Installing the package from the OpenWrt repository==
+==Installation==
 
 - Update the package lists
 
