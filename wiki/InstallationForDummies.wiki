@@ -44,7 +44,7 @@ Type 'opkg install fowsr' from the command line, or click the 'Install' link in 
 
 ==Configuration==
 
-- Choose the correct upload string, and fill in the username and password for registering the station:
+- Choose the correct upload script, and fill in the username and password for registering the station:
 
   * Use {{{*/5 * * * * /usr/bin/wunderground.sh <username> <password>}}} for uploading weather data to Weather Underground every 5 minutes
   * Use {{{*/5 * * * * /usr/bin/pwsweather.sh <username> <password>}}} for uploading weather data to PWS Weather every 5 minutes
