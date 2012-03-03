@@ -1,0 +1,31 @@
+#summary Freetz build instructions.
+
+= Introduction =
+
+The *fowsr* application is included as a [http://freetz.org/browser/trunk/make/fowsr package] in Freetz.
+
+= Details =
+
+== Custom build ==
+
+Download the Freetz build system and generate the binaries using the following steps:
+
+ * Check the prerequisites for running the Freetz build system. You need to have installed subversion, gcc, binutils, patch, bzip2, flex, make, gettext, pkg-config, unzip, libz-dev and libc headers.
+
+ * Download the latest Freetz trunk:
+
+      `$ svn co http://svn.freetz.org/trunk freetz`
+
+ * Enter the freetz catalog:
+
+      `$ cd freetz`
+
+ * Start the build system and select your architecture:
+
+      $ `make menuconfig`
+
+ * Select 'fowsr' to be included in the image
+
+ * Build the code:
+
+      $ `make`
