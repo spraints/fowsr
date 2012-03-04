@@ -2,7 +2,7 @@
 
 = Introduction =
 
-The *fowsr* application is included as a [https://dev.openwrt.org/browser/packages/utils/fowsr package] in OpenWrt.
+The *fowsr* application is included as a [https://dev.openwrt.org/browser/packages/utils/fowsr package] in [https://openwrt.org/ OpenWrt].
 
 = Details =
 
