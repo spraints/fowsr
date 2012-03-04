@@ -23,7 +23,7 @@ http://kamikaze.openwrt.org/docs/openwrt.html#x1-390002
 
 A quick guide includes the following steps:
 
- * Check the prerequisites for running the OpenWrt build system. You need to have installed subversion, gcc, binutils, patch, bzip2, flex, make, gettext, pkg-config, unzip, libz-dev and libc headers.
+ * Check the prerequisites for running the OpenWrt build system.
 
  * Download the latest OpenWrt trunk:
 
