@@ -2,7 +2,7 @@
 
 = Introduction =
 
-The *fowsr* application is included as a [http://freetz.org/browser/trunk/make/fowsr package] in Freetz.
+The *fowsr* application is included as a [http://freetz.org/browser/trunk/make/fowsr package] in [http://freetz.org/wiki# Freetz].
 
 = Details =
 
