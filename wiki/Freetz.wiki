@@ -10,7 +10,7 @@ The *fowsr* application is included as a [http://freetz.org/browser/trunk/make/f
 
 Download the Freetz build system and generate the binaries using the following steps:
 
- * Check the [http://freetz.org/wiki/help/howtos/common/install#NotwendigePakete prerequisites] for running the Freetz build system.
+ * Install the [http://freetz.org/wiki/help/howtos/common/install#NotwendigePakete prerequisites] for running the Freetz build system.
 
  * Download the latest Freetz trunk:
 
