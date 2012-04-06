@@ -27,11 +27,11 @@ A quick guide includes the following steps:
 
  * Download the latest OpenWrt trunk:
 
-      `$ svn checkout svn://svn.openwrt.org/openwrt/trunk kamikaze`
+      `$ svn checkout svn://svn.openwrt.org/openwrt/trunk openwrt`
 
- * Enter the kamikaze catalog:
+ * Enter the openwrt catalog:
 
-      `$ cd kamikaze`
+      `$ cd openwrt`
 
  * Include packages in the build: 
 
