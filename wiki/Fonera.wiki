@@ -2,15 +2,15 @@
 
 = Introduction =
 
-Fonera is built on Openwrt, and many packages from the Openwrt repository will run on the Fon products. A special build environment is however needed to compile the packages.
+Fonera is built on Openwrt, and many packages from the Openwrt repository will run on the Fonera. A special build environment is however needed to compile the packages.
 
 = Details =
 
 == Custom build ==
 
-Download the Fonera build system and generate the binaries using the following steps:
+Download the Fonera build system as described here [http://trac.fonosfera.org/fon-ng/wiki/build] and generate the binaries using the following steps:
 
- * Install the [http://trac.fonosfera.org/fon-ng/wiki/build] for running the Fonera build system.
+ * Install the for running the Fonera build system.
 
  * Download the latest Fonera trunk:
 
@@ -19,6 +19,20 @@ Download the Fonera build system and generate the binaries using the following s
  * Enter the fonera catalog:
 
       `$ cd fonera`
+
+ * Update and install FON feeds:
+
+      `$ chmod +x install.sh`
+      `$ ./install.sh`
+      `$ cd openwrt`
+
+ * Update OpenWRT feeds:
+
+       `$ ./scripts/feeds update -a`
+
+ * Install the fowsr package:
+
+       `$ ./scripts/feeds install fowsr`
 
  * Start the build system:
 
