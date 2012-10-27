@@ -10,7 +10,7 @@ Fonera is built on Openwrt, and many packages from the Openwrt repository will r
 
 Download the Fonera build system as described here [http://trac.fonosfera.org/fon-ng/wiki/build] and generate the binaries using the following steps:
 
- * Install the for running the Fonera build system.
+ * Install the requirements for running the Fonera build system.
 
  * Download the latest Fonera trunk:
 
