@@ -23,7 +23,9 @@ Download the [http://trac.fonosfera.org/fon-ng/wiki/build Fonera build system] a
  * Update and install FON feeds:
 
       `$ chmod +x install.sh`
+
       `$ ./install.sh`
+
       `$ cd openwrt`
 
  * Update OpenWRT feeds:
