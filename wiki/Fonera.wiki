@@ -36,10 +36,10 @@ Download the [http://trac.fonosfera.org/fon-ng/wiki/build Fonera build system] a
 
  * Start the build system:
 
-      $ `make menuconfig`
+       `$ make menuconfig`
 
  * Select your box and select 'fowsr' to be included in the image. Exit the build system and save the changes.
 
  * Build the code:
 
-      $ `make`
+       `$ make`
