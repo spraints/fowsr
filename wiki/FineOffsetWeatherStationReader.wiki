@@ -4,13 +4,13 @@
 
 Connect your weather station to the USB port of your Linux box, and upload its contents to the internet.
 
- * *fowsr* uses the libusb library to read information from the Fine Offset Weather Stations.
+ * *fowsr* uses the libusb (V0.1) library to read information from the Fine Offset Weather Stations.
 
  * *fowsr* is installed as `/usr/bin/fowsr`, and may be called directly from this location.
 
- * The cache file `/var/fowsr.dat` stores the weather station buffer between the reads. Deleting this file causes the application to re-read all weather station data.
+ * The cache file `/var/log/fowsr/fowsr.dat` stores the weather station buffer between the reads. Deleting this file causes the application to re-read all weather station data.
 
- * The log files `/var/*.log` contain the weather station output in the requested format.
+ * The log files `/var/log/fowsr/*.log` contain the weather station output in the requested format.
 
  * The script files `/usr/bin/*.sh` contain the weather station upload details.
 
@@ -19,24 +19,27 @@ Connect your weather station to the USB port of your Linux box, and upload its c
 
 = Details =
 
-This is the help instructions displayed when the fowsr application is called:
+The know options are displayed when the fowsr application is called with -h:
 
 {{{
-Fine Offset Weather Station Reader v1.0
-
-(C) 2010 Arne-Jørgen Auberg (arne.jorgen.auberg@gmail.com)
-Credits to Michael Pendec, Jim Easterbrook, Timo Juhani Lindfors
-
-See http://fowsr.googlecode.com for more information
-
 options
- -p     Logfile in pywws format
- -s     Logfile in PWS Weather format
- -w     Logfile in Wunderground format
- -x     Logfile in XML format
- -b     Display fixed block
- -d     Display decoded fixed block data
- -r     Dump all weather station records
+ -f[p|s|w|x|f]	set Logformat for weather data
+ 	-fp	Logfile in pywws format
+	-fs	Logfile in PWS Weather format
+	-fw	Logfile in Wunderground format
+	-fx	Logfile in XML format
+	-ff	Logfile in FHEM log format
+ -c	Log to screen (in FHEM-WS3600 format)
+ -n<filename>	set full path and name for weather data, may contain
+		%-wildcards of the POSIX strftime function and %%s
+		for a type specific name part
+		default for pywws is: //var//log//fowsr//pywws.log
+ -b	Display fixed block
+ -d	Display decoded fixed block data
+ -r	Dump all weather station records
+ -v<Level><Destination>	output debug messages
+ 	Level: 0-3	0-only errors, 3-all
+ 	Destination:	(c)onsole, (f)ile (same place as weather data), (b)oth
 }}}
 
 The following listing is an example of the fixed block contents of the weather station:
@@ -242,4 +245,4 @@ Each line represents a record that can be decoded as follows:
    ** 7th bit indicates rainfall overflow 
 
 
-For full details, see the source code: [http://code.google.com/p/fowsr/source/browse/trunk/fowsr-1.0/fowsr.h fowsr.h]
+For full details, see the source code: [http://code.google.com/p/fowsr/source/browse/trunk/fowsr.src/fowsr.h fowsr.h]

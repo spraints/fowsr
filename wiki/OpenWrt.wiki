@@ -20,6 +20,7 @@ Download the OpenWrt build system and generate the binaries as described in this
 
 http://kamikaze.openwrt.org/docs/openwrt.html#x1-390002
 
+Helpful instructions can also be found [http://wiki.openwrt.org/doc/howto/build#building.single.packages here]
 
 A quick guide includes the following steps:
 
@@ -27,11 +28,12 @@ A quick guide includes the following steps:
 
  * Download the latest OpenWrt trunk:
 
-      `$ svn checkout svn://svn.openwrt.org/openwrt/trunk openwrt`
+      `$ svn checkout svn://svn.openwrt.org/openwrt/trunk myopenwrt`
+      (For download of different releases see [https://dev.openwrt.org/wiki/GetSource here].)
 
  * Enter the openwrt catalog:
 
-      `$ cd openwrt`
+      `$ cd myopenwrt`
 
  * Include packages in the build: 
 
@@ -41,7 +43,7 @@ A quick guide includes the following steps:
 
       $ `./scripts/feeds install fowsr`
 
- * Start the build system and select your architecture:
+ * Start the build system, select your architecture and activate the *fowsr* module:
 
       $ `make menuconfig`
 
@@ -52,14 +54,14 @@ A quick guide includes the following steps:
 
 == Updating the Makefile ==
 
-Perform the following steps if the Makefile in the OpenWrt trunk is out of date:
+Perform the following steps if the Makefile in the OpenWrt trunk is out of date or if you want to use an different (newer) version of *fowsr*:
 
  * Copy this [http://fowsr.googlecode.com/svn/trunk/openwrt/Makefile Makefile] to the following location in your OpenWrt build system:
 
-`<build directory>/feeds/packages/utils/fowsr/Makefile`
+`myopenwrt/feeds/packages/utils/fowsr/Makefile`
 
- * Alternatively, update at least the following fields to match the latest Makefile:
-   ** `PKG_RELEASE`
+ * Alternatively, update at least the following fields to match the appropriate release:
+   ** `PKG_VERSION`
    ** `PKG_MD5SUM`
 
  * Build the updated package:
