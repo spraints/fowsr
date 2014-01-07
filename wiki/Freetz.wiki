@@ -29,3 +29,9 @@ Download the Freetz build system and generate the binaries using the following s
  * Build the code:
 
       $ `make`
+
+ * Follow [http://freetz.org/wiki/help/howtos/common/newbie.en these] instructions to upload the image to the unit.
+
+ * Log in to the console, and make the configuration files writable as stated [http://freetz.org/wiki/FAQ.en#Settingsarenotavailableatcurrentsecuritylevel here].
+
+ * Log in to the WEB interface, start crond, and edit crontab with the script to be called.
