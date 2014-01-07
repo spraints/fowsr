@@ -20,11 +20,11 @@ Download the Freetz build system and generate the binaries using the following s
 
       `$ cd freetz`
 
- * Start the build system:
+ * Start the build menu:
 
       $ `make menuconfig`
 
- * Select your box and select 'fowsr' to be included in the image. Exit the build system and save the changes.
+ * Select your box, and select 'fowsr' and 'wget' to be included in the image. Exit the build menu and save the changes.
 
  * Build the code:
 
