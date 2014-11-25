@@ -124,7 +124,11 @@ def convert(server, data)
     end
   end
 
-  JSON.dump(converted)
+  if converted.any?
+    JSON.dump(converted)
+  else
+    nil
+  end
 end
 
 Location = {"i" => "indoor", "o" => "outdoor"}
