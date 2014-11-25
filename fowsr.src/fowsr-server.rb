@@ -32,11 +32,13 @@ end
 
 # Start listening on the configured socket.
 def listen(server)
-  begin
-    UNIXSocket.new(server.socket_addr)
-  rescue Errno::ECONNREFUSED
-    # The socket is left over from a previous run.
-    File.unlink(server.socket_addr)
+  if File.exist?(server.socket_addr) && File.socket?(server.socket_addr)
+    begin
+      UNIXSocket.new(server.socket_addr)
+    rescue Errno::ECONNREFUSED
+      # The socket is left over from a previous run.
+      File.unlink(server.socket_addr)
+    end
   end
   server.socket = UNIXServer.new(server.socket_addr)
   File.chmod(0777, server.socket_addr)
