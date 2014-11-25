@@ -7,6 +7,7 @@ def main(options)
 
   install_signal_handlers server
   listen server
+  respawn_fowsr server
 
   loop do
     do_io server
@@ -19,6 +20,7 @@ end
 
 # Avoid dumping stack traces when we exit in a controlled way.
 def install_signal_handlers(server)
+  trap(:CHLD) { server.awake }
   [:INT, :TERM, :QUIT].each do |quit_signal|
     trap(quit_signal) { server.receive_quit_signal quit_signal }
   end
@@ -46,7 +48,7 @@ def do_io(server)
   handlers = {
     server.socket => lambda { accept_client(server) },
     server.fowsr_reader => lambda { consume_fowsr(server) },
-    server.awake_reader => nil,
+    server.awake_reader => lambda { server.awake_reader.read_nonblock(10000) },
   }
   server.clients.each do |client|
     handlers[client] = lambda { check_client(server, client) }
@@ -60,6 +62,15 @@ def do_io(server)
         handler.call
       end
     end
+  end
+end
+
+# Interpret the output of fowsr and send it along to all clients.
+def consume_fowsr(server)
+  data = server.fowsr_reader.read_nonblock(10000)
+  server.logger.info "Got #{data.size} bytes from fowsr."
+  server.clients.each do |client|
+    client.write(data)
   end
 end
 
@@ -78,22 +89,27 @@ def check_client(server, client)
 rescue EOFError
   server.logger.info "Client #{client.to_i} closed."
   server.clients.delete client
+  client.close
 end
 
 def respawn_fowsr(server)
-#  raise "todo - wait on existing pid"
-#  raise "spawn a new pid, if the old one has exited"
+  if server.fowsr_pid
+    if Process.waitpid(server.fowsr_pid, Process::WNOHANG)
+      server.logger.info "fowsr[#{server.fowsr_pid}] #{$?}"
+      server.fowsr_pid = nil
+    end
+  end
 
-#  while ok
-#  fowsr_path = options.fetch(:fowsr)
-#  socket_path = options.fetch(:sock)
-#
-#  fowsr_io = IO.pipe
-#  fowsr_pid = spawn fowsr_path, "-c", :out => fowsr_io[1]
+  if server.fowsr_pid.nil?
+    server.fowsr_pid = spawn(server.fowsr_path, "-c", :out => server.fowsr_writer)
+    server.logger.debug "fowsr[#{server.fowsr_pid}] spawned."
+  end
 end
 
 def kill_fowsr(server)
-  # todo - tell fowsr to die
+  if server.fowsr_pid
+    Process.kill :QUIT, server.fowsr_pid
+  end
 end
 
 class ServerInfo
@@ -102,14 +118,13 @@ class ServerInfo
   end
 
   attr_reader :options
+  # The path to the fowsr executable.
+  def fowsr_path ; options.fetch(:fowsr) ; end
+  # The address of the listening socket.
+  def socket_addr ; options.fetch(:sock) ; end
 
   def logger
     @logger ||= Logger.new(STDERR)
-  end
-
-  # The address of the listening socket.
-  def socket_addr
-    options.fetch(:sock)
   end
 
   # The Socket (UNIXServer) where we listen for new connections.
@@ -137,8 +152,13 @@ class ServerInfo
 
   # Time to exit.
   def receive_quit_signal(signal)
-    awake_writer << "."
     @quit = true
+    awake
+  end
+
+  # Time to pop out of IO.select.
+  def awake
+    awake_writer << "."
   end
 
   # The pair of IO for awakening.
