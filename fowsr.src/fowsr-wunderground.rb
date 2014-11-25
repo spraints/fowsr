@@ -20,6 +20,7 @@ DefaultParams = {
 
 fowsr = UNIXSocket.new(ARGV[0])
 while line = fowsr.recv(10000)
+  fowsr.close
   data = JSON.load(line)
   params = DefaultParams.dup
   data.each do |k,v|
@@ -34,5 +35,10 @@ while line = fowsr.recv(10000)
   end
   encoded_params = params.map { |k,v| "#{k}=#{v}" }.join("&")
   url = "http://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?#{encoded_params}"
-  open(url) { |f| f.read }
+  begin
+    open(url) { |f| f.read }
+  rescue Object => e
+    $stderr.puts e.inspect
+  end
+  fowsr = UNIXSocket.new(ARGV[0])
 end
