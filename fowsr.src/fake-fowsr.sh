@@ -7,8 +7,11 @@ sleep 98
 
 echo 'usb_set_debug: Setting debugging level to 1 (on)' >/dev/stderr
 
-date '+DTime %d-%m-%Y %H:%M:00'
+dtime=`date '+DTime %d-%m-%Y %H:%M:00'`
+etime=`date '+ETime %s'`
 cat <<EOF
+${dtime}
+${etime}
 RHi 54.0
 Ti 16.3
 RHo 71.0

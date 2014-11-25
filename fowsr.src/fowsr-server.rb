@@ -1,5 +1,6 @@
 require "socket"
 require "logger"
+require "json"
 
 #/ Usage: ruby fowsr-server.rb [--fowsr /path/to/fowsr] [--listen /path/to/sock]
 def main(options)
@@ -69,10 +70,61 @@ end
 def consume_fowsr(server)
   data = server.fowsr_reader.read_nonblock(10000)
   server.logger.info "Got #{data.size} bytes from fowsr."
-  server.clients.each do |client|
-    client.write(data)
+  if data = convert(server, data)
+    server.clients.each do |client|
+      client.write(data)
+    end
   end
 end
+
+# Given fowsr data, build the format required for clients.
+#
+# Conditions:
+#   Outdoor temp: 33F
+#   Outdoor humidity: 72%
+#   Indoor temp: 61F
+#   Indoor humidity: 52%
+#   pressure: 28inHg
+#
+# Input:
+#   DTime 25-11-2014 00:03:00
+#   ETime 1416898363
+#   RHi 52.0
+#   Ti 16.3
+#   RHo 72.0
+#   To 0.7
+#   RP 1004.3
+#   WS 0.0
+#   WG 0.0
+#   DIR 270.0
+#   Rtot 0.3
+#   state 00
+#
+# Output: (note this only includes data that's valid on my weather station)
+#   {"time": 1416898363, "indoor_rh": 52, "indoor_c": 16.3, "indoor_f": 61.2, "outdoor_rh": 72, "outdoor_c": 0.7, "outdoor_f": 33.3, "pressure_mbar": 1004.3, "pressure_inhg": 29.656}
+def convert(server, data)
+  converted = {}
+
+  data.lines.each do |line|
+    case line
+    when /^ETime (\d+)/
+      converted["time"] = $1.to_i
+    when /^RH([io]) ([0-9.]+)/
+      converted["#{Location.fetch($1)}_rh"] = $2.to_f
+    when /^T([io]) ([0-9.]+)/
+      loc = Location.fetch($1)
+      converted["#{loc}_c"] = c = $2.to_f
+      converted["#{loc}_f"] = f = (c * 9 / 5) + 32
+    when /^RP ([0-9.]+)/
+      converted["pressure_mbar"] = mbar = $1.to_f
+      converted["pressure_inhg"] = inhg = mbar * 0.0295299833
+    end
+  end
+
+  JSON.dump(converted)
+end
+
+Location = {"i" => "indoor", "o" => "outdoor"}
 
 # Try to accept a client connection to the socket.
 def accept_client(server)
