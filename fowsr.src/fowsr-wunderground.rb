@@ -3,6 +3,7 @@ require "json"
 require "open-uri"
 
 hostname = Socket.gethostname.split(".").first
+procline = $0
 
 DynParams = {
   "time" => {:param => "dateutc", :fmt => lambda { |s| Time.at(s).utc.strftime("%Y-%m-%d+%H%%3A%M%%3A%S")}},
@@ -35,6 +36,7 @@ while line = fowsr.recv(10000)
   end
   encoded_params = params.map { |k,v| "#{k}=#{v}" }.join("&")
   url = "http://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?#{encoded_params}"
+  $0 = "#{procline} -- #{url}"
   begin
     open(url) { |f| f.read }
   rescue Object => e
