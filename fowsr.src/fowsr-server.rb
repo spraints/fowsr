@@ -39,6 +39,7 @@ def listen(server)
     File.unlink(server.socket_addr)
   end
   server.socket = UNIXServer.new(server.socket_addr)
+  File.chmod(0777, server.socket_addr)
   server.logger.info "Listening on #{File.expand_path(server.socket.path)}, fd = #{server.socket.to_i}"
 end
 
