@@ -15,7 +15,7 @@ ${etime}
 RHi 54.0
 Ti 16.3
 RHo 71.0
-To 0.7
+To -0.7
 RP 1004.3
 WS 0.0
 WG 0.0

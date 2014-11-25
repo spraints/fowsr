@@ -114,7 +114,7 @@ def convert(server, data)
       converted["time"] = $1.to_i
     when /^RH([io]) ([0-9.]+)/
       converted["#{Location.fetch($1)}_rh"] = $2.to_f
-    when /^T([io]) ([0-9.]+)/
+    when /^T([io]) (-?[0-9.]+)/
       loc = Location.fetch($1)
       converted["#{loc}_c"] = c = $2.to_f
       converted["#{loc}_f"] = f = (c * 9 / 5) + 32
