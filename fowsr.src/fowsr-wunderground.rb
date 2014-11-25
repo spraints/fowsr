@@ -1,3 +1,4 @@
+#/ Usage: WUNDERGROUND_PASSWORD=password ruby fowsr-wunderground /var/run/fowsr.sock KINYOURID1
 require "socket"
 require "json"
 require "open-uri"
@@ -14,7 +15,7 @@ DynParams = {
 
 DefaultParams = {
   "action" => "updateraw",
-  "ID" => "KINPICKA2",
+  "ID" => ARGV[1],
   "PASSWORD" => ENV["WUNDERGROUND_PASSWORD"],
   "softwaretype" => "fowsr+spraints",
 }.freeze
