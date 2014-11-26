@@ -19,7 +19,7 @@ while line = fowsr.recv(10000)
   data = JSON.load(line)
   data.each do |k,v|
     if type = Types[k]
-      puts "PUTVAL #{hostname}/weather-kinpicka2/#{type}-#{k} #{data["time"]}:#{v}\n"
+      puts "PUTVAL #{hostname}/weather-kinpicka2/#{type}-#{k} interval=120 #{data["time"]}:#{v}\n"
     end
   end
 end
