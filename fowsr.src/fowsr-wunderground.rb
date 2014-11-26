@@ -11,6 +11,7 @@ DynParams = {
   "outdoor_rh" => {:param => "humidity"},
   "outdoor_f" => {:param => "tempf"},
   "pressure_inhg" => {:param => "baromin"},
+  "wind_dir" => {:param => "winddir"},
 }
 
 DefaultParams = {

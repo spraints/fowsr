@@ -12,6 +12,7 @@ Types = {
   "indoor_rh" => "percent",
   "pressure_mbar" => "gauge",
   "pressure_inhg" => "gauge",
+  "wind_dir" => "gauge",
 }
 
 Interval = 10

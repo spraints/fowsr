@@ -121,6 +121,8 @@ def convert(server, data)
     when /^RP ([0-9.]+)/
       converted["pressure_mbar"] = mbar = $1.to_f
       converted["pressure_inhg"] = inhg = mbar * 0.0295299833
+    when /^DIR ([0-9]+)/
+      converted["wind_dir"] = $1.to_i
     end
   end
 
