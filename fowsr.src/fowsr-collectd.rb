@@ -39,9 +39,10 @@ loop do
     if now - reported_at >= Interval
       data.each do |k,v|
         if type = Types[k]
-          puts "PUTVAL #{hostname}/weather-kinpicka2/#{type}-#{k} interval=#{Interval} #{now}:#{v}\n"
+          $stdout.puts "PUTVAL #{hostname}/weather-kinpicka2/#{type}-#{k} interval=#{Interval} #{now}:#{v}\n"
         end
       end
+      $stdout.flush # Collectd's pipe doesn't auto-flush.
       reported_at = now
     end
   end
