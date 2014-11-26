@@ -26,8 +26,16 @@ fowsr = UNIXSocket.new(ARGV[0])
 loop do
   # Collect new data when fowsr produces a new value.
   if IO.select([fowsr], nil, nil, 1)
-    data = JSON.load(fowsr.recv(10000))
-    collected_at = Time.now
+    raw = fowsr.recv(10000)
+    if raw.size > 0
+      data = JSON.load(fowsr.recv(10000))
+      collected_at = Time.now
+    else
+      # No data? weird. try restarting the connection.
+      $stderr.puts "[fowsr] got 0 bytes, reconnecting to #{ARGV[0]}"
+      fowsr.close
+      fowsr = UNIXSocket.new(ARGV[0])
+    end
   end
   # Stop reporting data that's really old.
   if Time.now - collected_at >= MaxAge
