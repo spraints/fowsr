@@ -14,12 +14,35 @@ Types = {
   "pressure_inhg" => "gauge",
 }
 
+Interval = 10
+MaxAge = 600
+
+reported_at = (Time.now - Interval).to_i
+collected_at = Time.now - MaxAge
+data = nil
+
 fowsr = UNIXSocket.new(ARGV[0])
-while line = fowsr.recv(10000)
-  data = JSON.load(line)
-  data.each do |k,v|
-    if type = Types[k]
-      puts "PUTVAL #{hostname}/weather-kinpicka2/#{type}-#{k} interval=120 #{data["time"]}:#{v}\n"
+
+loop do
+  # Collect new data when fowsr produces a new value.
+  if IO.select([fowsr], nil, nil, 1)
+    data = JSON.load(fowsr.recv(10000))
+    collected_at = Time.now
+  end
+  # Stop reporting data that's really old.
+  if Time.now - collected_at >= MaxAge
+    data = nil
+  end
+  # Report something at least every 10s.
+  if data
+    now = Time.now.to_i
+    if now - reported_at >= Interval
+      data.each do |k,v|
+        if type = Types[k]
+          puts "PUTVAL #{hostname}/weather-kinpicka2/#{type}-#{k} interval=#{Interval} #{now}:#{v}\n"
+        end
+      end
+      reported_at = now
     end
   end
 end
