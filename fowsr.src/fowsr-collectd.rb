@@ -29,7 +29,7 @@ loop do
   if IO.select([fowsr], nil, nil, 1)
     raw = fowsr.recv(10000)
     if raw.size > 0
-      data = JSON.load(fowsr.recv(10000))
+      data = JSON.load(raw)
       collected_at = Time.now
     else
       # No data? weird. try restarting the connection.
