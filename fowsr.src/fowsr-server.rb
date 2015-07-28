@@ -158,7 +158,10 @@ def respawn_fowsr(server)
     if Process.waitpid(server.fowsr_pid, Process::WNOHANG)
       server.logger.info "fowsr[#{server.fowsr_pid}] #{$?}"
       server.fowsr_pid = nil
-      server.next_start = Time.now + 15
+      # The weather values only change every 60s.
+      # Most of the time, fowsr runs in ~ 5s.
+      # So we wait at least 55s between updates.
+      server.next_start = Time.now + 55
     end
   end
 
