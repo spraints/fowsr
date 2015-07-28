@@ -158,12 +158,16 @@ def respawn_fowsr(server)
     if Process.waitpid(server.fowsr_pid, Process::WNOHANG)
       server.logger.info "fowsr[#{server.fowsr_pid}] #{$?}"
       server.fowsr_pid = nil
+      # The weather values only change every 60s.
+      # Most of the time, fowsr runs in ~ 5s.
+      # So we wait at least 55s between updates.
+      server.next_start = Time.now + 55
     end
   end
 
-  if server.fowsr_pid.nil?
+  if server.fowsr_pid.nil? && server.next_start < Time.now
     server.fowsr_pid = spawn(server.fowsr_path, "-c", :out => server.fowsr_writer)
-    server.logger.debug "fowsr[#{server.fowsr_pid}] spawned."
+    server.logger.info "fowsr[#{server.fowsr_pid}] spawned."
   end
 end
 
@@ -176,6 +180,7 @@ end
 class ServerInfo
   def initialize(options)
     @options = options
+    @next_start = Time.now - 1
   end
 
   attr_reader :options
@@ -205,6 +210,9 @@ class ServerInfo
 
   # The pid of the most-recently spawned `fowsr` process.
   attr_accessor :fowsr_pid
+
+  # The time to start another `fowsr` process.
+  attr_accessor :next_start
 
   # Has a quit_signal been received?
   def received_quit_signal?
