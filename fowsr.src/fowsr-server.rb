@@ -164,7 +164,7 @@ def respawn_fowsr(server)
 
   if server.fowsr_pid.nil? && server.next_start < Time.now
     server.fowsr_pid = spawn(server.fowsr_path, "-c", :out => server.fowsr_writer)
-    server.logger.debug "fowsr[#{server.fowsr_pid}] spawned."
+    server.logger.info "fowsr[#{server.fowsr_pid}] spawned."
   end
 end
 
