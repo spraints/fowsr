@@ -1,6 +1,6 @@
 Fine Offset Wireless Weather Station Reader.
 
-(C) 2010 Ane-Jørgen Auberg
+(C) 2010 Ane-JÃ¸rgen Auberg
 
 Software is not released through any official channels, and
 thereby do not expect support from the vendor on this product.
@@ -12,16 +12,16 @@ Product USB vendor details Vendor 1941, ID 8021
 
 The application is written with inspiration from the following projects:
 
-  1)	WeatherStation.py - The pywws poject. http://pywws.googlecode.com
+  1) WeatherStation.py - The pywws poject. http://pywws.googlecode.com
 
-  2)	usbsnoop2libusb.pl - The usbsnoop log file.
-	The latest version of the script should be in http://iki.fi/lindi/usb/usbsnoop2libusb.pl
+  2) usbsnoop2libusb.pl - The usbsnoop log file.
+	 The latest version of the script should be in http://iki.fi/lindi/usb/usbsnoop2libusb.pl
 
-  3)	wwsr.c - Wireless Weather Station Reader
-	Michael Pendec (michael.pendec@gmail.com)
+  3) wwsr.c - Wireless Weather Station Reader
+	 Michael Pendec (michael.pendec@gmail.com)
 
 
-Copyright (C) 2010 Arne-Jørgen Auberg  (arne.jorgen.auberg@gmail.com)
+Copyright (C) 2010 Arne-JÃ¸rgen Auberg  (arne.jorgen.auberg@gmail.com)
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -39,6 +39,7 @@ Copyright (C) 2010 Arne-Jørgen Auberg  (arne.jorgen.auberg@gmail.com)
 
 Dependencies:
 	libusb (http://libusb.sf.net)
+    json-c (http://www.github.com/json-c/json-c)
 
 Brief introduction to functionality.
 	- The application is called through a script called by cron.
@@ -57,4 +58,3 @@ Current status:
 
 TODO:
 	- More log formats
-
