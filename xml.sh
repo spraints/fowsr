@@ -10,4 +10,3 @@ rm -f $LOG
 rm -f $dat
 
 $wsr
-

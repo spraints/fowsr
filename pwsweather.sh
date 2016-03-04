@@ -21,4 +21,3 @@ do
   echo $WGET2
   wget -O /dev/null "$WGET2"
 done < $LOG
-
